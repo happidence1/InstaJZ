@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'Insta',
     'imagekit',
@@ -130,3 +130,5 @@ LOGIN_REDIRECT_URL = 'posts'
 LOGOUT_REDIRECT_URL = 'posts'
 
 AUTH_USER_MODEL = 'Insta.InstaUser'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
