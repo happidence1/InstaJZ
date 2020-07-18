@@ -11,7 +11,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class HelloWorld(TemplateView):
     template_name = 'test.html'
 
-class PostsView(ListView):
+class PostsView(LoginRequiredMixin, ListView):
+    login_url = '/auth/login/'
     model = Post
     template_name = 'index.html'
 
