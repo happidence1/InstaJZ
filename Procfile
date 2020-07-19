@@ -1,3 +1,3 @@
-web: gunicorn InstaJZ.wsgi:application --log-file - --log-level debug
+web: gunicorn instaJZ.wsgi:application --log-file - --log-level debug
 python manage.py collectstatic --noinput
 manage.py migrate
